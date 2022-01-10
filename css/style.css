@@ -134,69 +134,32 @@ body{
     color: var(--body-text-color) !important;
     font-family: var(--dm-mono-font) !important;
 }
-.hamb-line{
+.menu-icon-lines{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.menu-icon-lines span{
+    width: 48px;
+    height: 2px;
+    background-color: white;
     display: block;
+    margin: 4.6px 0px;
 }
-.line-1{
-    width: 40px;
-    margin-bottom: 5px;
-    height: 2px;
-    background-color: white;
+.menu-icon-lines span:nth-child(2){
+    width: 28px;
 }
-.line-2{
-    transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 25px;
-    height: 2px;
-    margin-bottom: 5px;
-    background-color: white;
+.menu-icon-lines span:nth-child(3){
+    width: 38px;
 }
-.line-3{
-    transition: width .3s cubic-bezier(0.165, 0.84, 0.44, 1);
-    width: 35px;
-    height: 2px;
-    background-color: white;
-}
-.x-line{
-    position: absolute;
-    top: 50%;
-    left: 45%;
-    width: 10px;
-    height: 2px;
-    background-color: white;
-    display: none;
-}
-.line-1-x{
-    left: 34.8%;
-}
-.line-2-x{
-    left: 50.8%;
-}
-.line-1-x-active{
-    position: absolute;
-    top: 38%;
-    left: 34.8%;
-    transform: rotate(-135deg);
-}
-.line-2-x-active{
-    position: absolute;
-    top: 38%;
-    left: 50.8%;
-    transform: rotate(-45deg);
-}
-.line-3-x-active{
-    position: absolute;
-    top: 55%;
-    left: 50.8%;
-    transform: rotate(45deg);
-}
-.line-4-x-active{
-    position: absolute;
-    top: 55%;
-    left: 34.8%;
-    transform: rotate(135deg);
+.menu-icon:hover .line{
+    transform: translateY(0px);
 }
 .hide-overflow{
     overflow: hidden;
+}
+.position-relative{
+    position: relative;
 }
 .menu-active{
     display: flex !important;
@@ -313,6 +276,8 @@ body{
 .mobile-nav{
     display: flex;
     width: 100%;
+    position: absolute;
+    z-index: 2;
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--line-color);
@@ -363,6 +328,9 @@ body{
     .headline-block h1{
         max-width: 80%;
     }
+    .intro-content{
+        padding: 0px !important;
+    }
 }
 @media (min-width: 992px) {
     .company-news-headline{
@@ -408,7 +376,10 @@ body{
 }
 @media (max-width: 998px) {
     .header-section{
-        height: 60vh !important;
+        height: 80vh !important;
+    }
+    .intro-section{
+        padding: 8% 3% !important;
     }
     .solutions-section{
         padding: 10% 3% !important;
@@ -1095,6 +1066,7 @@ body{
 }
 .insight-title{
     margin-top: 50px !important;
+    font-family: var(--neue-machina-font);
     margin-bottom: 25px !important;
 }
 .insight-title span{

@@ -34,7 +34,7 @@ let serviceAnimations = gsap.timeline({scrollTrigger:{
 //Hamburger Menu Animations
 var $hamburger = $('#hamb-button');
         var hamburgerMotion = new TimelineMax()
-        .fromTo(".nav-menu", {height: "0vh",}, {height: "90vh", duration: 0.4,})
+        .fromTo(".nav-menu", {height: "0vh",}, {height: "92vh", duration: 0.4,})
         .fromTo(".sidebar-link-mobile", { delay:-2, y: 50, opacity: 0, }, { duration: 0.2, y:0, opacity: 1,  stagger: 0.05,})
         .fromTo(".company-info", { opacity: 0, y: 50,}, { duration: 0.3, opacity: 1, y:0, stagger: 0.1,})
         .restart()
@@ -76,3 +76,19 @@ let counter = gsap.timeline({scrollTrigger:{
 //Footer Gradient Animations
 ScrollTrigger.batch(".footer-gradient-wrapper div", {onEnter: batch => gsap.from(batch, {  width: 0 , duration: 0.5, stagger: 0.1 }), once: "true"});
 //Footer Gradient Animations
+
+
+//Hamburger Menu Animations
+$(".menu-icon").each(function (index, element){
+        var tl = new TimelineLite({paused:true});
+        tl.to(".line-2", 0.2, {x: 20, opacity: 0, ease: "power4.inOut"})
+        .to(".line-1", 0.1, {y: 11, rotation: 45})
+        .to(".line-3", 0.1, {width: 48, y:-11.2, rotation:-45}, "<")
+        element.animation = tl;
+      })
+      
+      $(".menu-icon").on('click', function(){
+        this.animation.play();
+      });
+
+//Hamburger Menu Animations
