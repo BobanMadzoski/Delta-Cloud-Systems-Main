@@ -34,7 +34,7 @@ let serviceAnimations = gsap.timeline({scrollTrigger:{
 //Hamburger Menu Animations
 var $hamburger = $('#hamb-button');
         var hamburgerMotion = new TimelineMax()
-        .fromTo(".nav-menu", {height: "0vh",}, {height: "100vh", duration: 0.4,})
+        .fromTo(".nav-menu", {height: "0vh",}, {height: "90vh", duration: 0.4,})
         .fromTo(".sidebar-link-mobile", { delay:-2, y: 50, opacity: 0, }, { duration: 0.2, y:0, opacity: 1,  stagger: 0.05,})
         .fromTo(".company-info", { opacity: 0, y: 50,}, { duration: 0.3, opacity: 1, y:0, stagger: 0.1,})
         .restart()
