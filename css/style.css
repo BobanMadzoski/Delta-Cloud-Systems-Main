@@ -20,6 +20,7 @@
     /* --body-1-font: 14px;
     --body-2-font: 20px;
     --body-3-font: 16px; */
+    --footer-cat-font: 14px;
     --links-font: 14px;
     --button-text-font: 16px;
     --subhead-1-font: 20px;
@@ -252,11 +253,13 @@ body{
 }
 .social-link{
     overflow: hidden;
-    padding: 10px 0px;
 }
 .social-link a{
-    padding: 10px 20px;
+    padding: 8px 20px;
     transition: color .3s ease-in-out;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
 }
 .social-link a::after{
     display: inline-block;
@@ -272,7 +275,10 @@ body{
 }
 .social-link a:hover{
     color: var(--dcs-emerald-dark) !important;
-    transition: color .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-underline-offset: 3px;
 }
 .mobile-nav{
     display: flex;
@@ -280,6 +286,7 @@ body{
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--line-color);
+    text-decoration-style: dotted !important;
 }
 .mobile-navigation-bar{
     display: none;
@@ -414,7 +421,7 @@ body{
   }
   .gradient-wrapper{
     position: absolute;
-    width: 30%;
+    width: 50%;
     height: 100%;
     top: 0;
     left: 0;
@@ -484,6 +491,11 @@ body{
       color: var(--pure-white) !important;
       word-break: break-all;
       font-family: var(--neue-machina-font);
+  }
+  .info-card div>a:hover{
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-underline-offset: 3px;
   }
   .info-text-wrap{
       width: 100%;
@@ -655,6 +667,14 @@ body{
       color: var(--pure-white) !important;
       font-size: var(--button-text-font) !important;
       transition: background-color .3s ease-in-out;
+      margin-left: 10px;
+      text-transform: uppercase !important;
+      font-family: var(--neue-machina-font);
+  }
+  .picture-button{
+      font-family: var(--neue-machina-font);
+      text-transform: uppercase;
+      margin-left: 10px;
   }
   .button:hover{
       background-color: var(--dcs-emerald-dark) !important;
@@ -771,16 +791,19 @@ body{
   .sidebar-link-web:hover .link-text{
       transform:translateX(15px);
       transition: all .3s ease-in-out;
+      filter: invert(47%) sepia(38%) saturate(811%) hue-rotate(86deg) brightness(106%) contrast(83%);
   }
   .sidebar-link-web:hover  .link-image{
     transform: translateX(20px);
     transition: all .3s ease-in-out;
+    filter: invert(47%) sepia(38%) saturate(811%) hue-rotate(86deg) brightness(106%) contrast(83%);
 }
   .qualities-section{
       border-bottom: 1px solid var(--line-color);
   }
   .image-wrapper{
       position: relative;
+      width: 100%;
   }
   .image-reveal{
       position: absolute;
@@ -1089,7 +1112,7 @@ body{
 }
 .footer-gradient-wrapper{
     position: absolute;
-    width: 30%;
+    width: 50%;
     height: 100%;
     top: 0;
     left: 0;
@@ -1130,7 +1153,7 @@ body{
     padding: 40px 0px;
 }
 .footer-cat{
-    font-size: var(--body-1-font);
+    font-size: var(--footer-cat-font);
 }
 .what-is-dcs-and-certificate{
     display: flex;
@@ -1155,6 +1178,19 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    font-family: var(--neue-machina-font);
+}
+.footer-contact a{
+    display: block;
+    padding: 10px 0px;
+    transition: all .2s ease-in-out;
+}
+.footer-contact a:hover{
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-underline-offset: 3px;
+    color: var(--dcs-emerald-dark) !important;
+    transition: all .2s ease-in-out;
 }
 .tel a{
     font-size: calc(24px + (48 - 24) * ((100vw - 300px) / (2600 - 300))) !important;
@@ -1183,17 +1219,26 @@ body{
 .footer-links a{
     font-family: var(--dm-mono-font) !important;
     font-size: 14px !important;
-    padding: 10px 0px;
+    padding: 8px 0px;
+    display: block;
+    width: 100%;
+    text-transform: uppercase;
+    transition: all .2s ease-in-out;
 }
 .footer-link a:hover{
+    transition: all .2s ease-in-out;
     text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-underline-offset: 3px;
     color: var(--dcs-emerald-dark) !important;
 }
-.footer-link{
-    padding: 5px 0px;
+.footer-link a:hover .footer-link-img{
+    filter: invert(47%) sepia(38%) saturate(811%) hue-rotate(86deg) brightness(106%) contrast(83%);
+    transition: all .2s ease-in-out;
 }
 .footer-link img{
     margin-right: 5px;
+    transition: all .2s ease-in-out;
 }
 .footer-bottom-col{
     padding: 30px 0px;

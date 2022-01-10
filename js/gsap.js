@@ -27,8 +27,7 @@ $(window).on('load',function(){
 let serviceAnimations = gsap.timeline({scrollTrigger:{
 	trigger:".services-list",
 }})
-.from(".service-line", {width: 0, duration: 1, ease: "power4.inOut", stagger: 0.1})
-.from(".service", {opacity: 0, duration: 0.5, ease: "power4.inOut", stagger: 0.15}, "<")
+
 //Services Animations
 
 
