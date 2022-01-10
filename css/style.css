@@ -332,6 +332,9 @@ body{
     }
 }
 @media (min-width: 992px) {
+    .company-news-headline{
+        width: 60%;
+    }
     .sidebar-links{
         border-top: 1px solid var(--line-color);
     }
@@ -367,6 +370,7 @@ body{
     }
     .solutions-headline{
         text-indent: 10%;
+        width: 70%;
     }
 }
 @media (max-width: 998px) {
@@ -379,6 +383,7 @@ body{
     .solutions-heading{
     align-items: flex-start !important;
     flex-direction: column !important;
+    padding: 10% 0px;
     }
     .solutions-button{
         margin-top: 35px;
@@ -826,7 +831,7 @@ body{
           justify-content: flex-end !important;
       }
       .company-news-heading{
-          padding-bottom: 5%;
+          padding-bottom: 10%;
           border-bottom: 1px solid var(--line-color);
       }
       .case-study-col-1{
@@ -945,9 +950,6 @@ body{
     flex-direction: row;
     justify-content: space-between;
 }
-.solutions-headline{
-    width: 70%;
-}
 .case-studies-section{
     border-bottom: 1px solid var(--line-color);
 }
@@ -1019,14 +1021,11 @@ body{
     border-bottom: 1px solid var(--line-color);
 }
 .company-news-heading{
-    margin-top: 3%;
+    margin-top: 5%;
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
-}
-.company-news-headline{
-    width: 60%;
 }
 .insights-row{
     margin-top: 10% !important;
