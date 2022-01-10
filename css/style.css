@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Roboto:ital,wght@0,100;1,100&display=swap');
 
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ffffff60;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(179, 179, 179);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(155, 155, 155);
+}
+
 :root{
     --dcs-emerald-dark: #30a655;
     --dcs-violet: #6c00d9;
