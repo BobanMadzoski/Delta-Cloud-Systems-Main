@@ -27,7 +27,7 @@ $(window).on('load',function(){
 let serviceAnimations = gsap.timeline({scrollTrigger:{
 	trigger:".services-list",
 }})
-
+        .fromTo(".service-content", {y: 50, opacity: 0}, {y: 0, opacity: 1, duration: 0.3, stagger: 0.1, ease: "power4.in"})
 //Services Animations
 
 
@@ -80,15 +80,19 @@ ScrollTrigger.batch(".footer-gradient-wrapper div", {onEnter: batch => gsap.from
 
 //Hamburger Menu Animations
 $(".menu-icon").each(function (index, element){
-        var tl = new TimelineLite({paused:true});
+        var tl = new TimelineLite({paused: true});
         tl.to(".line-2", 0.2, {x: 20, opacity: 0, ease: "power4.inOut"})
         .to(".line-1", 0.1, {y: 11, rotation: 45})
         .to(".line-3", 0.1, {width: 48, y:-11.2, rotation:-45}, "<")
         element.animation = tl;
       })
-      
-      $(".menu-icon").on('click', function(){
-        this.animation.play();
-      });
 
+      $('.menu-icon').on('click', function(event) {
+        event.preventDefault();
+        if(this.animation.paused() || this.animation.reversed()){
+                this.animation.play();
+        } else{
+                this.animation.reverse();
+        }
+    });
 //Hamburger Menu Animations

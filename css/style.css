@@ -283,6 +283,9 @@ body{
     border-bottom: 1px solid var(--line-color);
     text-decoration-style: dotted !important;
 }
+.mobile-nav-brand img{
+    min-width: 225px;
+}
 .mobile-navigation-bar{
     display: none;
 }
@@ -756,6 +759,11 @@ body{
     justify-content: space-between;
     align-content: center;
     overflow: hidden;
+  }
+  .service-content{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
   }
   .link-arrow{
     transition: all .3s ease-in-out;
