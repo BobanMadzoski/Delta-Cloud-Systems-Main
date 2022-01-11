@@ -129,10 +129,12 @@ h6{
 }
 body{
     font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300))) !important;
-    height: 6000px;
     background-color: var(--background-color) !important;
     color: var(--body-text-color) !important;
     font-family: var(--dm-mono-font) !important;
+}
+.other-pages-header-section{
+    height: 80vh !important;
 }
 .about-us-header-section{
     position: relative;
@@ -377,6 +379,12 @@ body{
     }
 }
 @media (min-width: 992px) {
+    .case-study-second-col h2{
+        text-indent: 10%;
+    }
+    .qualities-col{
+        border-right: 1px solid var(--line-color);
+    }
     .company-news-headline{
         width: 60%;
     }
@@ -413,6 +421,11 @@ body{
     .solutions-headline{
         text-indent: 10%;
         width: 70%;
+    }
+    .benefits-section h2{
+        text-indent: 10%;
+        max-width: 50%;
+        margin-bottom: 10%;
     }
 }
 @media (max-width: 998px) {
@@ -469,6 +482,16 @@ body{
       height: 100vh;
   }
   .gradient-wrapper{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    z-index: 1;
+    flex-direction: column;
+  }
+  .gradient-wrapper-solutions{
     position: absolute;
     width: 50%;
     height: 100%;
@@ -673,6 +696,9 @@ body{
     height: 10px;
     transition: all .3s ease-in-out;
   }
+  .picture-button span{
+      color: var(--pure-white) !important;
+  }
   .picture-button span:before{
     content: '';
     position: absolute;
@@ -840,7 +866,7 @@ body{
   .sidebar-link-web img{
       position: relative;
       left: -15px;
-      margin-left: -13px;
+      margin-left: -14px;
       transition: all .3s ease-in-out;
   }
   .link-text{
@@ -870,6 +896,7 @@ body{
       width: 100%;
       height: 100%;
       background-color: var(--pure-black);
+      z-index: 2;
   }
   @media (max-width: 768px){
       .quality-card, .quality-card-01, .quality-card-02, .quality-card-03{
@@ -888,7 +915,9 @@ body{
           margin-bottom: 25px !important;
       }
   }
-
+  .solutions-header-section{
+    height: 45vh !important;
+}
   @media (max-width: 992px){
       .insight-title{
           margin-top: 10px !important;
@@ -902,6 +931,12 @@ body{
       }
       .headline-block{
           justify-content: flex-end !important;
+      }
+      .solutions-headline-block{
+          height: 100%;
+      }
+      .solutions-headline-block h1{
+          max-width: none !important;
       }
       .company-news-heading{
           padding-bottom: 15%;
@@ -937,7 +972,12 @@ body{
       }
       .case-study-block-second{
           margin-top: 10% !important;
-          margin-bottom: 20%;
+      }
+      .case-study-block .sub-head-1{
+          display: none;
+      }
+      .case-study-number{
+          padding-bottom: 10px;
       }
       .count-block{
           width: 100% !important;
@@ -954,12 +994,16 @@ body{
       border-bottom: 1px solid var(--line-color);
   }
   .core-value-title{
-      margin: 20px 0px;
+      margin-top: 5px;
+      margin-bottom: 20px;
   }
   .quality-card{
     padding: 40px 25px;
     min-height: 570px;
     border-left: 1px solid var(--line-color);
+}
+.quality-card-single-solution{
+    min-height: 545px !important;
 }
   .quality-card .number{
       font-size: 16px;
@@ -1038,12 +1082,16 @@ body{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+.case-study-second-col h2{
+    font-weight: 300 !important;
+}
 .case-study-block{
     width: 100%;
     height: 100%;
     margin-top: 60%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
     align-items: flex-start;
 }
 .case-study-block-second{
@@ -1191,7 +1239,9 @@ body{
     flex-direction: column;
     padding-top: 3% !important;
     font-size: 14px;
-    line-height: 1;
+    line-height: 1.2;
+    font-weight: 400 !important;
+    font-family: var(--neue-machina-font);
 }
 .info-col{
     padding-top: 3% !important;
@@ -1209,6 +1259,32 @@ body{
     color: #ffffff90;
     font-family: var(--neue-machina-font);
     line-height: 1;
+}
+.testimonial-paragraph-about{
+    margin: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.testimonial-paragraph-about p{
+    margin-bottom: 10%;
+}
+@media (max-width:992px) {
+    .testimonial-paragraph-about p{
+        margin-top: 5%;
+    }
+}
+.testimonial-id-about{
+    border-left: 1px solid var(--line-color);
+    padding-left: 5px;
+    padding-top: 0px !important;
+}
+.testimonial-id-about-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
 }
 .optimisation-section{
     background-repeat: no-repeat;
@@ -1399,4 +1475,213 @@ body{
     .optimisation-section{
         padding-right: 1.5% !important;
     }
+}
+.solution-section{
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+}
+.solution-info{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.solution{
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    margin-bottom: 20px;
+}
+.solution img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+.solution:after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000060;
+    top: 0px;
+    left: 0px;
+}
+.solution-content{
+    padding: 30px 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.solution-header{
+    display: flex;
+    justify-content: space-between;
+}
+@media(max-width:992px){
+    .solution-header{
+        flex-direction: column;
+    }
+}
+.solution-title{
+    width: 100%;
+}
+.solution-paragraph{
+    width: 100%;
+    color: var(--pure-white) !important;
+}
+.headline-main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-start;
+}
+.headline-check-qualities{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+}
+.check-qualities{
+    width: 35%;
+}
+.check-quality{
+    font-family: var(--neue-machina-font);
+    font-size: 18px;
+    color: var(--pure-white);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid var(--line-color);
+    padding: 10px 0px;
+}
+.check-quality:first-of-type{
+    border-top: 1.5px solid var(--line-color);
+}
+.single-solution-headline-block{
+    justify-content: flex-end !important;
+}
+@media (max-width:992px){
+    .headline-check-qualities{
+        align-items: flex-start !important;
+    }
+    .check-qualities{
+        width: 100% !important;
+    }
+    .headline-main{
+        margin-bottom: 10%;
+    }
+}
+.benefits-section{
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+}
+.benefits{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.benefit{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-top: 1px solid var(--pure-white);
+    padding-top: 10px;
+    margin-bottom: 35px;
+    align-items: center;
+}
+.benefit-title{
+    font-family: var(--neue-machina-font);
+    font-size: var(--subhead-2-font);
+    color: var(--headlines-color);
+}
+.benefit-number-and-title{
+    width: 100%;
+}
+.benefit-info{
+    width: 100%;
+    margin: 0px;
+}
+
+@media (max-width:768px){
+    .benefit{
+        flex-direction: column;
+    }
+    .benefit-info{
+        margin-top: 5px;
+    }
+    .benefits-section .intro-info-text{
+        margin-bottom: 30px !important;
+    }
+}
+.single-case-study-section{
+    border-bottom: 1px solid var(--line-color); 
+}
+.case-study-block-footer-content{
+    display: flex;
+    flex-direction: column;
+}
+.single-case-study-block-1{
+    font-family: var(--neue-machina-font);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.case-study{
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.case-study-link{
+    font-family: var(--dm-mono-font);
+    text-transform: uppercase;
+    color: var(--pure-white) !important;
+}
+.case-study-link:hover{
+    filter: invert(47%) sepia(38%) saturate(811%) hue-rotate(86deg) brightness(106%) contrast(83%);
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+    text-decoration-style: dotted !important;
+    transition: all .3s ease-in-out;
+}
+.case-study-info{
+    font-size: 20px;
+    color: var(--pure-white);
+    margin-bottom: 20px;
+}
+.single-case-study-picture-block img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    object-position: center center;
+}
+.single-case-study-picture-block{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding:35px 25px;
+}
+.picture-block-content .title{
+    font-family: var(--neue-machina-font) !important;
+    font-size: var(--subhead-3-font) !important;
+    color: var(--pure-white);
+}
+.case-study-quote{
+    margin-bottom: 7%;
+}
+.picture-block-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
