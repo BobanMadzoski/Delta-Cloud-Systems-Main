@@ -1174,7 +1174,6 @@ body{
     border-bottom: 1px solid var(--line-color);
 }
 .company-news-heading{
-    margin-top: 10%;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -1219,13 +1218,22 @@ body{
 .insight-button a{
     font-size: 14px !important;
     font-family: var(--dm-mono-font);
-    text-decoration: underline !important;
     text-transform: uppercase;
 }
 .insight-link img{
     width: 12px;
     height: 12px;
     margin-right: 5px;
+}
+.insight-link{
+    transition: all .3s ease-in-out;
+}
+.insight-link:hover{
+    text-decoration: underline !important;
+    text-decoration-style: dotted !important;
+    text-underline-offset: 3px;
+    filter: invert(47%) sepia(38%) saturate(811%) hue-rotate(86deg) brightness(106%) contrast(83%);
+    transition: all .3s ease-in-out;
 }
 .testimonial-section-about{
     border-top: 1px solid var(--line-color);
@@ -1296,6 +1304,9 @@ body{
     margin-bottom: 10%;
 }
 @media (max-width:992px) {
+    .company-news-headline{
+        padding-bottom: 20px;
+    }
     .testimonial-paragraph-about p{
         margin-top: 5%;
     }
