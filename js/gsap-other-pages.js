@@ -4,6 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
         .fromTo(".brand", {opacity: 0}, {opacity: 1, duration: 0.5})
         .from(".gradient-wrapper div", {width: 0, duration: 0.5, stagger: 0.1}, "<")
         .fromTo(".headline-block div", {opacity: 0, y: 30}, {y:0, opacity: 1, duration: 0.3, stagger: 0.2}, "<")
+        .fromTo(".single-solution-headline-block div", {opacity: 0, y: 30}, {y:0, opacity: 1, duration: 0.3, stagger: 0.2}, "<")
         .fromTo(".info-animate-line-1", {y: "50px"}, {y: 0, duration: 0.2}, "-=0.5")
         .fromTo(".info-animate-line-2", {y: "50px"}, {y: 0, duration: 0.2}, "-=0.3")
         .fromTo(".info-card .tel", {y: "20px"}, { y: 0, duration: 0.2}, "<")
@@ -60,6 +61,21 @@ let counter = gsap.timeline({scrollTrigger:{
         innerText: 10
 }}, "<")
 // Counter
+
+//Solution Counter
+let solution_counter = gsap.timeline({scrollTrigger:{
+	trigger:".count-block",
+}})
+.to("#solution-count-1", {innerText: 1000, duration: 1, snap: {
+        innerText: 5
+}})
+.to("#solution-count-2", {innerText: 52, duration: 1, snap: {
+        innerText: 5
+}}, "<")
+.to("#solution-count-3", {innerText: 250, duration: 1, snap: {
+        innerText: 5
+}}, "<")
+//Solution Counter
 
 
 //Footer Gradient Animations
