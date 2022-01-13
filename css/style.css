@@ -132,6 +132,7 @@ body{
     background-color: var(--background-color) !important;
     color: var(--body-text-color) !important;
     font-family: var(--dm-mono-font) !important;
+    letter-spacing: 0.5px;
 }
 .other-pages-header-section{
     height: 80vh !important;
@@ -271,7 +272,6 @@ body{
 .sidebar-links a{
     font-size: var(--navbar-web-font) !important;
     text-transform: uppercase;
-    display: inline-block;
     width: 100%;
 }
 .sidebar-links a:hover .sidebar-link{
