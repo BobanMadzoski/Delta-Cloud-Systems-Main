@@ -132,7 +132,7 @@ body{
     background-color: var(--background-color) !important;
     color: var(--body-text-color) !important;
     font-family: var(--dm-mono-font) !important;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.5px !important;
 }
 .other-pages-header-section{
     height: 80vh !important;
